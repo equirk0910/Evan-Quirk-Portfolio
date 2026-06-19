@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Your Name</h1>
+      <p>Web developer • Portfolio</p>
+    </header>
+    <main>
+      <section id="about">
+        <h2>About</h2>
+        <p>Short bio goes here.</p>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>Project One</strong> — short description.</li>
+          <li><strong>Project Two</strong> — short description.</li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; <span id="year"></span> Your Name</p>
+    </footer>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
