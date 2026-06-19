@@ -21,7 +21,15 @@
         <p>My focus is translating complex business and technical requirements into scalable delivery frameworks that improve speed, accuracy, and system reliability across engineering, operations, and business teams.</p>
       </section>
       <section id="projects">
-        <h2>Projects</h2>
+        <h2 style="cursor: pointer; display: inline-block;" onclick="toggleProjectsDropdown(event)">Projects <span id="dropdown-icon" style="font-size: 0.8em; margin-left: 5px;">▼</span></h2>
+        <div id="projects-dropdown" style="display: none; background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 10px 0 20px 0; border-left: 4px solid #6366f1;">
+          <a href="/projects.html#erp-project" style="display: block; margin: 8px 0; text-decoration: none; color: #6366f1; font-weight: 600;">→ Enterprise ERP Migration & Systems Integration</a>
+          <a href="/projects.html#shipping-project" style="display: block; margin: 8px 0; text-decoration: none; color: #6366f1; font-weight: 600;">→ Parcel Rate Shopping Automation</a>
+          <a href="/projects.html#soc2-project" style="display: block; margin: 8px 0; text-decoration: none; color: #6366f1; font-weight: 600;">→ SOC 2 Type I & II Compliance Program</a>
+          <a href="/projects.html#aws-project" style="display: block; margin: 8px 0; text-decoration: none; color: #6366f1; font-weight: 600;">→ AWS Cost Optimization Initiative</a>
+          <a href="/projects.html#agile-project" style="display: block; margin: 8px 0; text-decoration: none; color: #6366f1; font-weight: 600;">→ Agile Delivery Framework Implementation</a>
+          <a href="/projects.html" style="display: block; margin: 12px 0 0 0; padding-top: 12px; border-top: 1px solid #e5e7eb; text-decoration: none; color: #6366f1; font-weight: 700;">View All Projects →</a>
+        </div>
         <ul>
           <li><a href="/projects.html#erp-project"><strong>Enterprise ERP Migration & Systems Integration (Sage X3 Integration)</strong></a> — Led an enterprise initiative to centralize product master data into Sage X3, integrating four downstream systems and coordinating multiple cross-functional teams. Improved data consistency, reduced operational friction, and enabled a scalable product lifecycle management structure across the organization.</li>
           <li><a href="/projects.html#shipping-project"><strong>Parcel Rate Shopping Automation (Carrier API Integration)</strong></a> — Designed and implemented an automated shipping rate optimization system using UPS, FedEx, USPS, and Amazon APIs. Improved logistics decision-making and generated approximately $250K in annual shipping cost savings.</li>
@@ -42,6 +50,23 @@
     </footer>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
+      
+      function toggleProjectsDropdown(event) {
+        const dropdown = document.getElementById('projects-dropdown');
+        const icon = document.getElementById('dropdown-icon');
+        dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+        icon.textContent = dropdown.style.display === 'none' ? '\u25bc' : '\u25b2';
+      }
+      
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(event) {
+        const dropdown = document.getElementById('projects-dropdown');
+        const projectsSection = document.getElementById('projects');
+        if (!projectsSection.contains(event.target) && dropdown.style.display === 'block') {
+          dropdown.style.display = 'none';
+          document.getElementById('dropdown-icon').textContent = '\u25bc';
+        }
+      });
     </script>
   </body>
 </html>

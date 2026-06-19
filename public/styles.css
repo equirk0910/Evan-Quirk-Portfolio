@@ -28,3 +28,8 @@ nav a:hover { text-decoration: underline; }
 .project-detail li:before { content: "→ "; color: #6366f1; font-weight: 800; }
 
 hr { margin: 50px 0; border: none; border-top: 2px solid #e5e7eb; }
+
+/* Clickable Projects Header */
+#projects h2 { transition: all 0.2s ease; }
+#projects h2:hover { color: #8b5cf6; transform: translateX(5px); }
+#projects-dropdown a:hover { color: #8b5cf6; text-decoration: underline; }
