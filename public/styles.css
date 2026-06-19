@@ -14,3 +14,17 @@ a { color:#6366f1; text-decoration:none; font-weight:700; }
 a:hover { color:#8b5cf6; }
 footer { text-align:center; padding:40px; color:#6b7280; background:#f9fafb; border-top:2px solid #e5e7eb; }
 
+
+/* Projects Page Styles */
+nav { text-align: center; padding: 15px 0; background: rgba(0,0,0,0.05); }
+nav a { color: #6366f1; text-decoration: none; font-weight: 600; }
+nav a:hover { text-decoration: underline; }
+
+.project-detail { margin-bottom: 50px; padding: 30px; background: #f9fafb; border-radius: 12px; border-left: 5px solid #6366f1; }
+.project-detail h3 { color: #6366f1; font-size: 1.6em; margin-top: 0; margin-bottom: 15px; font-weight: 800; }
+.project-role { color: #6b7280; font-size: 0.95em; margin-bottom: 15px; }
+.project-detail ul { margin-left: 0; padding-left: 0; }
+.project-detail li { margin-bottom: 10px; padding: 0; background: transparent; border-left: none; }
+.project-detail li:before { content: "→ "; color: #6366f1; font-weight: 800; }
+
+hr { margin: 50px 0; border: none; border-top: 2px solid #e5e7eb; }
